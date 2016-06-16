@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="length" format="integer"></attr>
+    <attr name="outBorderColor" format="color"></attr>
+    <attr name="inBorderColor" format="color"></attr>
+    <attr name="contentHidden" format="boolean"></attr>
+    <attr name="textSize" format="dimension"></attr>
+    <declare-styleable name="PwdInputView">
+        <attr name="length"></attr>
+        <attr name="outBorderColor"></attr>
+        <attr name="inBorderColor"></attr>
+        <attr name="contentHidden"></attr>
+        <attr name="textSize"></attr>
+    </declare-styleable>
+</resources>
