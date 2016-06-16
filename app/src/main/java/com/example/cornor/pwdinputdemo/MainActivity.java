@@ -7,6 +7,9 @@ import android.widget.Toast;
 import com.example.cornor.pwdinputdemo.view.NumInputView;
 import com.example.cornor.pwdinputdemo.view.PwdInputView;
 
+/**
+ * 主界面
+ */
 public class MainActivity extends AppCompatActivity {
 
     private PwdInputView pwdInputView;
