@@ -10,7 +10,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.cornor.pwdinputdemo.MainActivity">
 
-    <com.example.cornor.pwdinputdemo.view.PwdInputView
+    <com.cornor.passwordview.PwdInputView
         android:id="@+id/pwdInpuView"
         android:layout_width="match_parent"
         android:layout_height="80dp"
@@ -21,15 +21,15 @@
         app:outBorderColor="@color/colorPrimary"
         >
 
-    </com.example.cornor.pwdinputdemo.view.PwdInputView>
+    </com.cornor.passwordview.PwdInputView>
 
-    <com.example.cornor.pwdinputdemo.view.NumInputView
+    <com.cornor.passwordview.NumInputView
         android:layout_below="@+id/pwdInpuView"
         android:id="@+id/numInpuView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         >
 
-    </com.example.cornor.pwdinputdemo.view.NumInputView>
+    </com.cornor.passwordview.NumInputView>
 
 </RelativeLayout>

@@ -1,4 +1,4 @@
-package com.example.cornor.pwdinputdemo.view;
+package com.cornor.passwordview;
 
 import android.content.Context;
 import android.text.TextUtils;
@@ -6,9 +6,6 @@ import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.GridLayout;
-import android.widget.Switch;
-
-import com.example.cornor.pwdinputdemo.R;
 
 /**
  * Desc:

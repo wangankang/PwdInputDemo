@@ -1,11 +1,10 @@
-package com.example.cornor.pwdinputdemo.view;
+package com.cornor.passwordview;
 
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Build;
-import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.Gravity;
@@ -13,8 +12,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
-import com.example.cornor.pwdinputdemo.R;
 
 import java.util.ArrayList;
 
@@ -53,28 +50,17 @@ public class PwdInputView extends LinearLayout {
         int count = array.getIndexCount();
         for (int i = 0; i < count; i++) {
             int index = array.getIndex(i);
-            switch (index){
-                case R.styleable.PwdInputView_length:{
-                    length = array.getInt(index,6);
-                    break;
-                }
-                case R.styleable.PwdInputView_contentHidden:{
-                    isPwdHidden = array.getBoolean(index,true);
-                    break;
-                }
-                case R.styleable.PwdInputView_inBorderColor:{
-                    inBorderColor = array.getColor(index, Color.BLACK);
-                    break;
-                }
-                case R.styleable.PwdInputView_outBorderColor:{
-                    outBorderColor = array.getColor(index,Color.BLACK);
-                    break;
-                }
-                case R.styleable.PwdInputView_textSize:{
-                    textSize = array.getDimensionPixelSize(index, (int) TypedValue.applyDimension(
-                            TypedValue.COMPLEX_UNIT_SP, 16, getResources().getDisplayMetrics()));
-                    break;
-                }
+            if(index ==R.styleable.PwdInputView_length){
+                length = array.getInt(index,6);
+            }else if(index ==  R.styleable.PwdInputView_contentHidden){
+                isPwdHidden = array.getBoolean(index,true);
+            }else if(index == R.styleable.PwdInputView_inBorderColor){
+                inBorderColor = array.getColor(index, Color.BLACK);
+            }else if(index ==  R.styleable.PwdInputView_outBorderColor){
+                outBorderColor = array.getColor(index,Color.BLACK);
+            }else if(index ==  R.styleable.PwdInputView_textSize){
+                textSize = array.getDimensionPixelSize(index, (int) TypedValue.applyDimension(
+                        TypedValue.COMPLEX_UNIT_SP, 16, getResources().getDisplayMetrics()));
             }
         }
         array.recycle();

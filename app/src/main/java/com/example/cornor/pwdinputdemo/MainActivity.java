@@ -1,11 +1,11 @@
 package com.example.cornor.pwdinputdemo;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
 
-import com.example.cornor.pwdinputdemo.view.NumInputView;
-import com.example.cornor.pwdinputdemo.view.PwdInputView;
+import com.cornor.passwordview.NumInputView;
+import com.cornor.passwordview.PwdInputView;
 
 /**
  * 主界面
