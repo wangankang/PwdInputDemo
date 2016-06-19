@@ -5,6 +5,7 @@ import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Build;
+import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.Gravity;
@@ -29,7 +30,8 @@ public class PwdInputView extends LinearLayout {
     private int textSize = 16;
     private OnInputListener inputListener;
     private StringBuilder password;
-    private String placeholderText="●";
+    public static final String DEFAULT_HOLDER_TEXT = "●";
+    private String placeholderText = DEFAULT_HOLDER_TEXT;
     private ArrayList<TextView> textViewList;
     public interface OnInputListener{
         void onInputComplete(String content);
@@ -64,6 +66,11 @@ public class PwdInputView extends LinearLayout {
                         TypedValue.COMPLEX_UNIT_SP, 16, getResources().getDisplayMetrics()));
             }else if(index == R.styleable.PwdInputView_placeholderText){
                 placeholderText = array.getString(index);
+                if(!TextUtils.isEmpty(placeholderText) && placeholderText.length() > 1){
+                    placeholderText = placeholderText.substring(0,1);
+                }else if(TextUtils.isEmpty(placeholderText)){
+                    placeholderText = DEFAULT_HOLDER_TEXT;
+                }
             }
         }
         array.recycle();
