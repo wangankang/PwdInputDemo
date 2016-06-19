@@ -5,11 +5,13 @@
     <attr name="inBorderColor" format="color"></attr>
     <attr name="contentHidden" format="boolean"></attr>
     <attr name="textSize" format="dimension"></attr>
+    <attr name="placeholderText" format="string"></attr>
     <declare-styleable name="PwdInputView">
         <attr name="length"></attr>
         <attr name="outBorderColor"></attr>
         <attr name="inBorderColor"></attr>
         <attr name="contentHidden"></attr>
         <attr name="textSize"></attr>
+        <attr name="placeholderText"></attr>
     </declare-styleable>
 </resources>

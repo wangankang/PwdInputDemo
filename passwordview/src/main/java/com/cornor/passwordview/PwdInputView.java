@@ -29,6 +29,7 @@ public class PwdInputView extends LinearLayout {
     private int textSize = 16;
     private OnInputListener inputListener;
     private StringBuilder password;
+    private String placeholderText="●";
     private ArrayList<TextView> textViewList;
     public interface OnInputListener{
         void onInputComplete(String content);
@@ -61,6 +62,8 @@ public class PwdInputView extends LinearLayout {
             }else if(index ==  R.styleable.PwdInputView_textSize){
                 textSize = array.getDimensionPixelSize(index, (int) TypedValue.applyDimension(
                         TypedValue.COMPLEX_UNIT_SP, 16, getResources().getDisplayMetrics()));
+            }else if(index == R.styleable.PwdInputView_placeholderText){
+                placeholderText = array.getString(index);
             }
         }
         array.recycle();
@@ -88,7 +91,6 @@ public class PwdInputView extends LinearLayout {
         }
         for (int i = 0; i < length; i++) {
             final TextView txtV = new TextView(context);
-            txtV.setTextSize(textSize);
             LayoutParams params = new LayoutParams(0, ViewGroup.LayoutParams.MATCH_PARENT);
             params.weight = 1;
             if(i > 0){
@@ -96,6 +98,7 @@ public class PwdInputView extends LinearLayout {
             }
             txtV.setLayoutParams(params);
             txtV.setMaxEms(1);
+            txtV.setTextSize(textSize);
             txtV.setGravity(Gravity.CENTER);
             addView(txtV);
             textViewList.add(txtV);
@@ -115,7 +118,7 @@ public class PwdInputView extends LinearLayout {
         }
         TextView textView = textViewList.get(password.length());
         if(isPwdHidden){
-            textView.setText("*");
+            textView.setText(placeholderText);
         }else {
             textView.setText(text);
         }
