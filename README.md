@@ -13,6 +13,16 @@ Add thd code in your build.gradle
         compile 'com.cornor.passwordview:passwordview:1.0.0'
     }
 
+支持属性:
+
+    length:密码长度
+    outBorderColor：外边框颜色
+    inBorderColor：内边框颜色
+    contentHidden：内容是否隐藏
+    textSize：字体大小
+    placeholderText：占位符文字(一位)
+
+
 布局文件：
 
     <?xml version="1.0" encoding="utf-8"?>
@@ -56,12 +66,5 @@ Add thd code in your build.gradle
     </RelativeLayout>
 
 
-支持属性:
 
-    length:密码长度
-    outBorderColor：外边框颜色
-    inBorderColor：内边框颜色
-    contentHidden：内容是否隐藏
-    textSize：字体大小
-    placeholderText：占位符文字(一位)
 
