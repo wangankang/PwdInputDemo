@@ -2,7 +2,7 @@ Password-Input-View
 ----
 a password input view
 
-<img src="https://github.com/wangankang/PwdInputView/blob/master/Screenshot_20160619-095112.png" width="200" height="200"/>
+<img src="https://github.com/wangankang/PwdInputView/blob/master/Screenshot_20160619-095112.png" width="216" height="384"/>
 
 **Usage**
 ----
